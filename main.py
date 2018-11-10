@@ -14,7 +14,8 @@ try:
     print image_name
     print path
     # 删除文件夹
-    shutil.rmtree(path)
+    if os.path.exists(path):
+        shutil.rmtree(path)
     # 创建文件夹
     os.makedirs(path)
     # 加载图片
